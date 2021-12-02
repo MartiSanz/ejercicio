@@ -1,0 +1,194 @@
+body, button{
+   font-family:'Courier New', Courier, monospace;
+}
+
+#lista {
+    display: flex;
+    flex-direction: column;
+}
+
+label, h5 {
+    padding-right: 10px;
+}
+
+h5 {
+    margin: 0px;
+    padding: 6px;
+}
+
+#div-tareas, #div-cerrarSesion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "listaCarpetas listaCarpetas"
+    "listTareas inputEditar";
+}
+
+#btn-cerrarCarpeta, #btn-cerrarSesion{
+    height: min-content;
+}
+
+#inputsMostrar{
+    display: inherit;
+}
+
+#inputEditar, #list-tareas, #lista-carpetas, .visible, .form-ingreso {
+    border: solid 3px gray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ingreso{
+    height: 30px;
+}
+
+#div-ingreso{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+#lista-carpetas{
+    grid-area: listaCarpetas;
+}
+
+#list-tareas {
+    grid-area: listTareas;
+}
+
+#inputEditar{
+    grid-area: inputEditar;
+}
+
+.input, #botones-edit{
+    padding-top: 10px;
+}
+
+#btn-editar{
+    grid-area: btnEdit;
+    width: 50px;
+}
+
+.label-tarea, #h5-carpeta{
+    grid-area: label;
+}
+
+#btn-eliminar{
+    grid-area: btnDelete;
+    width: 70px;
+}
+
+#btn-cerrar{
+    grid-area: btnCerrar;
+    width: 70px;
+}
+
+#btn-ver{
+    grid-area: btnVer;
+    width: 110px;
+}
+
+.fila-tarea{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "label btnEdit btnDelete";
+}
+
+tr{
+    padding-top: 10px;
+}
+
+#fila-carpeta{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "label btnVer btnDelete btnCerrar";
+}
+
+table{
+    align-content:space-around;
+}
+
+input[type="button"], input[type="submit"] {
+    background: none;
+    color: blue;
+    border: none;
+    padding: 6px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button{
+    border: 1px outset gray;
+}
+
+#input-usuario{
+    grid-area: usuario;
+}
+
+#input-clave{
+    grid-area: clave;
+}
+
+#btn-ingreso{
+    grid-area: btningreso;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #contenedor{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "listaCarpetas"
+        "listTareas"
+        "inputEditar";
+    }
+
+    #inputEditar, #list-tareas, #lista-carpetas,  .form-ingreso{
+        width: auto;
+    }
+
+    .form-ingreso {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "usuario"
+        "clave"
+        "btningreso";
+    }
+	
+	#div-ingreso{
+        text-align: center;
+	}
+	
+
+    .form-ingreso {
+		border: solid 3px gray;
+		padding: 10px;
+	}
+	
+	.ingreso{
+		height: 30px;
+		width: 80%;
+	}
+	
+	#btn-ingreso{
+		width: 83%;
+	}
+
+}
+
+
+.oculto{
+    display: none;
+}

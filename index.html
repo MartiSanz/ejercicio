@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lista de tareas</title>
+</head>
+<body>
+
+    <div id="contenedor">
+
+        <div class="oculto" id = "lista-carpetas">
+
+            <!-- LISTA DE CARPETAS -->
+            <section>
+                <div id="div-cerrarSesion">
+                    <h2>Folders</h2>
+                    <button id="btn-cerrarSesion"> Sign out </button>
+                </div>
+
+                <table>
+                    <tbody id="tabla-carpetas">
+                        
+                    </tbody>
+                </table>    
+            </section>
+
+
+            <!-- INGRESAR NUEVA CARPETA -->
+            <section>
+                <form id="form-carpetas"> 
+                    <div class="input"> 
+                        <input class="inputT" type="text" name="carpetaNueva" placeholder="New Folder" minlength="1" required>
+                        <button id="btn-agregarCarpeta"> Add </button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+
+
+
+        <div class="oculto" id = "list-tareas">
+
+            <!-- LISTA DE TAREAS -->
+            <section>
+                <div id="div-tareas">
+                    <h2 id="h2-tareas"></h2>
+                    <button id="btn-cerrarCarpeta"> Close </button>
+                </div>
+
+                <table>
+                    <tbody id="lista">
+                        
+                    </tbody>
+                </table>    
+            </section>
+
+
+            <!-- INGRESAR NUEVA TAREA -->
+            <section>
+                <form id="form-tareas"> 
+                    <div class="input"> 
+                        <input class="inputT" type="text" name="tareaNueva" placeholder="New Task" minlength="1" required>
+                        <button id="btn-agregarTarea"> Add </button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- EDITAR TAREA -->
+        <section class="oculto" id="inputEditar">
+            <form id="form-edit-tareas"> 
+                <div>
+                    <h2 id="h2-editing"> Editing Task</h2>
+                </div>
+                <div class="input">
+                    <input class="inputT" id="inputTareaEdit" type="text" name="tareaModificada" minlength="1" required>
+                    <div id="botones-edit">
+                        <button id="btn-guardarCambio"> Save </button>
+                        <button id="btn-cancelarCambio"> Cancel </button>    
+                    </div>
+                    <div> <p id="mensajeEdit"> </p> </div>
+                </div>
+            </form>
+        </section>
+        
+    </div>
+
+    <div id="div-ingreso">
+        <form class="form-ingreso" id="ingresoId">
+            <input class="inputT ingreso" id="input-usuario" type="text" name="usuario" placeholder="User" minlength="1" required>
+            <input class="inputT ingreso" id="input-clave" type="password" name="clave" placeholder="Password" minlength="1" required>
+            <button class="ingreso" id="btn-ingreso"> Sign in </button>
+            <p id="mensaje"></p>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>  
+</body>
+</html>
